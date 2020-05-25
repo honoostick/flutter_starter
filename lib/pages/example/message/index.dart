@@ -1,23 +1,18 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/pages/example/data_presentation/charts.dart';
-import 'package:flutter_starter/pages/example/data_presentation/list.dart'
-    as mListView;
-import 'package:flutter_starter/pages/example/data_presentation/table.dart';
 import 'package:toast/toast.dart';
 
 /**
- * graph, table, list
+ * message
+ * https://www.jianshu.com/p/1ed01d528858
  */
-class FormView extends StatefulWidget {
+class MessageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return FormViewState();
+    return MessageViewState();
   }
 }
 
-class FormViewState extends State<FormView> {
+class MessageViewState extends State<MessageView> {
   var _formKey = new GlobalKey<FormState>();
   var _userNameCtl = TextEditingController();
   var _pwdCtl = TextEditingController();
@@ -92,15 +87,12 @@ class FormViewState extends State<FormView> {
                           Expanded(
                             flex: 4,
                             child: Container(
-                                // height: 50,
-                                padding: EdgeInsets.all(0),
+                                height: 50,
                                 child: TextFormField(
                                   controller: _userNameCtl,
+                                  expands: true,
                                   maxLines: null,
-                                  style: TextStyle(fontSize: 15),
-                                  // strutStyle: StrutStyle(height: 50),
                                   decoration: new InputDecoration(
-                                    contentPadding: EdgeInsets.symmetric(vertical: -5),
                                     floatingLabelBehavior:
                                         FloatingLabelBehavior.never,
                                     labelText: 'Please input username',
@@ -116,6 +108,7 @@ class FormViewState extends State<FormView> {
                         labelText: 'Password',
                       ),
                       obscureText: true,
+                      // autovalidate: true,
                       onChanged: (val) {
                         _formKey.currentState.validate();
                       },

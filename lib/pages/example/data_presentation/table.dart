@@ -44,6 +44,7 @@ class TableViewState extends State<TableView> {
   /// Create series list with multiple series
   static List<TableRow> _createSampleData() {
     return [
+      // TableRowInkWell(),
       TableRow(
         children: [Text('1'),Text('1'),Text('1'),Text('1'),Text('1')],
         decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3, style: BorderStyle.solid))

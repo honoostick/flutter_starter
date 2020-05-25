@@ -1,0 +1,3 @@
+const DEFAULT_TEXT_SIZE = 14;
+const DEFAULT_TEXT_HEIGHT = 18;
+const APP_BAR_HEIGHT = 75;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/pages/example/data_presentation/index.dart';
 import 'package:flutter_starter/pages/example/form/index.dart';
+import 'package:flutter_starter/pages/example/message/index.dart';
 import 'package:provider/provider.dart';
 import '../../store/example.dart';
 import '../../api/example_api.dart';
@@ -71,6 +72,19 @@ class ExampleViewState extends State<ExampleView>
             color: Theme.of(context).primaryColor,
             child: Text(
               'Form',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+                    MaterialButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MessageView()),
+              );
+            },
+            color: Theme.of(context).primaryColor,
+            child: Text(
+              'Message',
               style: TextStyle(color: Colors.white),
             ),
           ),

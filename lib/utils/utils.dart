@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/const/const.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -32,6 +33,10 @@ class Utils {
 
   static Size getDeviceSize(BuildContext context) {
     return MediaQuery.of(context).size;
+  }
+
+  static double getHeightWithoutBar(BuildContext context) {
+    return getDeviceSize(context).height - APP_BAR_HEIGHT;
   }
 }
 
